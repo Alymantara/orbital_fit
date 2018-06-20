@@ -2,11 +2,12 @@
 
 Fast program to fit a circular orbit to a dataset of radial velocity
 measurements from a binary system.
+
 ------
 ## Pre-requsites
-⋅⋅⋅lmfit
-⋅⋅⋅Numpy
-⋅⋅⋅Matplotlib
+1. lmfit
+2. Numpy
+3. Matplotlib
    
 ------
 ## Usage
