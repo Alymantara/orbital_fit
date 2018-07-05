@@ -1,7 +1,6 @@
 # Orbital fitting program
 import numpy as np
 import matplotlib.pyplot as plt
-from scipy.optimize import leastsq
 import matplotlib.cm as cm
 import lmfit as lm
 import os as os
@@ -12,7 +11,7 @@ plt.ion() # Activate update
 
 if sys.version[:3] == '2.7':
     reload(op)
-else:    
+else:
     from importlib import reload
     reload(op)
 import corner
