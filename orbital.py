@@ -9,8 +9,12 @@ import param as op
 import sys
 import time as ti
 plt.ion() # Activate update
-from importlib import reload
-reload(op)
+
+if sys.version[:3] == '2.7':
+    reload(op)
+else:    
+    from importlib import reload
+    reload(op)
 import corner
 
 if os.path.isfile(op.file) == False:
