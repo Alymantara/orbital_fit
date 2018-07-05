@@ -13,7 +13,7 @@ plt.ion() # Activate update
 from importlib import reload
 reload(op)
 
-def loop(variable,initial,delta,num,):
+def loop(variable,initial,delta,num):
     import param as op
     reload(op)
     runner=initial+np.arange(num)*delta
@@ -85,7 +85,10 @@ def loop(variable,initial,delta,num,):
         print( '--------------')
         chisqr.append(results.chisqr)
     chisqr = np.array(chisqr)
+    print( '%%%%%%%%%%%%%%%%%%%5%%%')
     print("Minimum Chi^2: ", runner[chisqr == np.min(chisqr)][0])
+    print("Porb_min = {:.8f}".format(runner[chisqr == np.min(chisqr)][0]))
+    print( '%%%%%%%%%%%%%%%%%%%5%%%')
     plt.figure(num = 'Loop',facecolor='w')
     plt.clf()
     plt.plot(runner,chisqr/results.nfree,'rs',markersize=6)
