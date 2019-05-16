@@ -114,7 +114,7 @@ plt.errorbar(phase-1.0 ,vel,yerr=errors_data*rescale,marker='o',ms=3,mec='k',eco
 xx = np.arange(-1,3,0.01)
 plt.plot(xx,results.params['gama'].value+results.params['k1'].value*np.sin(2.0*np.pi*xx),'b-')
 plt.axis([0,2,min(vel)*op.plotlim,max(vel)*op.plotlim])
-plt.ylabel('Radial Velocity, km s$^{-1}$')
+plt.ylabel(r'Radial Velocity / km s$^{-1}$')
 
 ax1.yaxis.set_major_locator(plt.MaxNLocator(9))
 ax1.xaxis.set_major_locator(plt.MaxNLocator(4))
@@ -137,7 +137,7 @@ plt.errorbar(phase-1.0,res,yerr=errors_data*rescale,marker='o',ms=3,mec='k',ecol
 ax2.yaxis.set_major_locator(plt.MaxNLocator(5))
 ax2.xaxis.set_major_locator(plt.MaxNLocator(4))
 plt.minorticks_on()
-plt.xlabel('Orbital Phase, $\phi$')
+plt.xlabel(r'Orbital Phase, $\phi$')
 plt.axhline(y=0.0,linestyle='--',color='k')
 plt.ylabel('Residuals')
 plt.axis([0,2,min(res)*op.lim_res,max(res)*op.lim_res])
