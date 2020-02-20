@@ -90,13 +90,16 @@ lm.report_errors(results.params,show_correl=False)
 print ('--------------')
 print ('DoF = ',results.nfree)
 print ('Chi-squared = ',results.chisqr)
-
+print ('Red_chi^2 = ',results.redchi)
+print ('RMS of resiudals = ',np.std(results.residual))
+print ('--------------')
 if op.scale_errors:
     rescale = np.sqrt(results.chisqr/results.nfree)
 else:
     rescale = 1.0
 
-print ('Rescale = ',rescale)
+print ('Rescale factor of errorbars = ',rescale)
+
 phase1=[]
 phase = phaser(hjd,results.params['hjd0'].value+int(op.hjd0),results.params['porb'].value)
 
